@@ -9,7 +9,8 @@ const greetings = [
 const weather_icon_mapping = {
     'Partly cloudy' : 'cloud',
     'Cloudy' : 'cloud',
-    'Patchy light drizzle' : 'cloud-snow'
+    'Patchy light drizzle' : 'cloud-snow',
+    'Light rain shower' : 'cloud-rain',
 }
 
 const time_element = document.querySelector('.time');
