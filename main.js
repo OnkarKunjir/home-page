@@ -7,10 +7,8 @@ const greetings = [
 ];
 
 const weather_icon_mapping = {
-    'Partly cloudy' : 'cloud',
-    'Cloudy' : 'cloud',
-    'Patchy light drizzle' : 'cloud-snow',
-    'Light rain shower' : 'cloud-rain',
+    'cloud' : 'cloud',
+    'rain' : 'cloud-rain',
 }
 
 const time_element = document.querySelector('.time');
@@ -87,7 +85,14 @@ let set_weather = () => {
             temprature_element.innerHTML = data[1].substring(1, data[1].length-2) + "&deg;<sub>c</sub>";
             weather_description_element.innerHTML = data[0];
             
-            weather_icon_element.setAttribute('data-feather', weather_icon_mapping[data[0]]);
+            let weather_category = data[0].toLowerCase();
+            if (weather_category.includes('rain') || weather_category.includes('drizzle')){
+                weather_category = 'rain';
+            }
+            else if (weather_category.includes('cloud')){
+                weather_category = 'cloud';
+            }
+            weather_icon_element.setAttribute('data-feather', weather_icon_mapping[weather_category]);
             feather.replace();
         }
     );
