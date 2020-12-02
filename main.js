@@ -9,6 +9,7 @@ const greetings = [
 const weather_icon_mapping = {
     'cloud' : 'cloud',
     'rain' : 'cloud-rain',
+    'sunny' : 'sun',
 }
 
 const time_element = document.querySelector('.time');
@@ -91,6 +92,9 @@ let set_weather = () => {
             }
             else if (weather_category.includes('cloud')){
                 weather_category = 'cloud';
+            }
+            else if (weather_category.includes('sun')){
+                weather_category = 'sunny';
             }
             weather_icon_element.setAttribute('data-feather', weather_icon_mapping[weather_category]);
             feather.replace();
