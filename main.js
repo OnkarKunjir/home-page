@@ -93,9 +93,11 @@ let set_weather = () => {
             else if (weather_category.includes('cloud')){
                 weather_category = 'cloud';
             }
-            else if (weather_category.includes('sun')){
+            else {
+                // default icon.
                 weather_category = 'sunny';
             }
+           
             weather_icon_element.setAttribute('data-feather', weather_icon_mapping[weather_category]);
             feather.replace();
         }
