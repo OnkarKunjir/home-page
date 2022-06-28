@@ -104,3 +104,6 @@ let set_weather = () => {
     );
 }
 set_weather();
+window.onload = function() {
+    search_box.focus();
+}
