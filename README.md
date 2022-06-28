@@ -1,3 +1,5 @@
 # home-page
-Custom homepage for browser.
-preview https://onkarkunjir.github.io/home-page/
+Custom homepage for browser. Preview
+```shell
+https://onkarkunjir.github.io/home-page/
+```
